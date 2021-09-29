@@ -1,0 +1,318 @@
+body {
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+[style="text-align: center;"] {
+  font-size: 50px;
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0095ff;
+}
+
+.container0 {
+  z-index: 150;
+  background-color: white;
+  width: 600px;
+  height: 215px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  justify-content: center;
+  align-content: center;
+}
+.container0 > button {
+  right: -16px;
+  position: absolute;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 7px 11px;
+  background-color: #0095ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  top: -13px;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #7c7c7c8a;
+  z-index: 10;
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  grid-gap: 5px;
+  background: white;
+  position: relative;
+  display: none;
+}
+
+.frinds {
+  padding: 10px;
+}
+
+.frinds::after {
+  content: "";
+  background-color: #f5f5f5;
+  height: 937px;
+  width: 2px;
+  position: absolute;
+  left: 360px;
+  top: 0;
+}
+
+.frinds .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .person {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.header .image {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(0, 151, 211);
+  border-radius: 50%;
+  margin: 10px;
+  background-image: url("https://rjeem.com/wp-content/uploads/2019/12/%D8%A7%D8%AD%D9%84%D9%89-%D8%A8%D9%88%D9%83%D9%8A%D9%87-%D9%88%D8%B1%D8%AF-%D8%8C-%D9%88-%D8%A7%D8%AC%D9%85%D9%84-%D8%A8%D8%A7%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B2%D9%87%D9%88%D8%B1-600x400.jpg");
+  background-size: contain;
+  cursor: pointer;
+}
+
+.frinds .header .icons {
+  display: flex;
+}
+
+.header .icons div {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header img {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.frinds .search {
+  background-color: whitesmoke;
+  width: 310px;
+  height: 30px;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  margin: 8px auto;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.frinds .search p {
+  display: inline-block;
+  margin-left: 13px;
+  color: #979797;
+  font-size: 15px;
+}
+
+.frinds .search img {
+  margin-left: 11px;
+  width: 17px;
+}
+
+.frinds .frind-one {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.frinds .frind-one .image {
+  width: 56px;
+  height: 56px;
+  background-color: rgb(0, 151, 211);
+  border-radius: 50%;
+  margin: 10px;
+  background-image: url("https://scontent.fcai3-1.fna.fbcdn.net/v/t1.6435-9/140513925_748562276079060_6206655851114517863_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGNNO8kn7IZRN3Deik12t2fzGbvMPZ6l8_MZu8w9nqXzy02od14kD9siRR3U8B8i-FU4dOB45w_LgRbiMP8uvd5&_nc_ohc=4gbjzY1UHdwAX9LjUOH&_nc_ht=scontent.fcai3-1.fna&oh=dc66b39e4665b30fcd7c75ecd48a2a41&oe=617AC24A");
+  background-size: contain;
+}
+.frinds .frind-one h3 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 15px;
+}
+.frinds .frind-one p {
+  margin: 0;
+  font-size: 13px;
+  color: #a7a7a7;
+}
+
+.chat .person .image {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 151, 211);
+  border-radius: 50%;
+  margin: 10px;
+  background-image: url("https://scontent.fcai3-1.fna.fbcdn.net/v/t1.6435-9/140513925_748562276079060_6206655851114517863_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGNNO8kn7IZRN3Deik12t2fzGbvMPZ6l8_MZu8w9nqXzy02od14kD9siRR3U8B8i-FU4dOB45w_LgRbiMP8uvd5&_nc_ohc=4gbjzY1UHdwAX9LjUOH&_nc_ht=scontent.fcai3-1.fna&oh=dc66b39e4665b30fcd7c75ecd48a2a41&oe=617AC24A");
+  background-size: contain;
+  cursor: pointer;
+}
+.chat .person .text h3 {
+  font-size: 17px;
+  margin: 0;
+  font-weight: 600;
+}
+.chat .person .text p {
+  margin: 0;
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+.chat .header {
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 6px 0 #20212426;
+}
+
+.chat .header .icons {
+  display: flex;
+  align-items: center;
+}
+
+.chat .header .icons i,
+.chat .header .icons img {
+  font-size: 20px;
+  color: #0099ff;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.chat > .content {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+.chat .content .image {
+  width: 28px;
+  height: 28px;
+  background-color: rgb(0, 151, 211);
+  border-radius: 50%;
+  background-image: url("https://scontent.fcai3-1.fna.fbcdn.net/v/t1.6435-9/140513925_748562276079060_6206655851114517863_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGNNO8kn7IZRN3Deik12t2fzGbvMPZ6l8_MZu8w9nqXzy02od14kD9siRR3U8B8i-FU4dOB45w_LgRbiMP8uvd5&_nc_ohc=4gbjzY1UHdwAX9LjUOH&_nc_ht=scontent.fcai3-1.fna&oh=dc66b39e4665b30fcd7c75ecd48a2a41&oe=617AC24A");
+  background-size: contain;
+  cursor: pointer;
+}
+
+.chat .content .phone {
+  width: 31px;
+  height: 31px;
+  padding: 5px;
+  background-color: #e4e6eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chat .content .phone i {
+  color: #1d1f23;
+  font-size: 22px;
+}
+
+.chat .content .text {
+  width: 145px;
+  height: 60px;
+  background-color: #f3f3f5;
+  border-radius: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.chat .content .text h5 {
+  display: inline;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.chat .content .text p {
+  font-size: 13px;
+  color: #7d7d7d;
+  margin: 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  bottom: -27px;
+  position: relative;
+}
+
+.footer i {
+  color: #0099ff;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer .like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .input {
+  padding: 4px 12px;
+  height: 28px;
+  background-color: #f3f3f5;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  justify-content: space-between;
+}
+
+.footer .input p {
+  margin: 0;
+  margin-left: 8px;
+}
