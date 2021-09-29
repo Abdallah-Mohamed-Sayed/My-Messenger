@@ -3,6 +3,80 @@ body {
   margin: 0;
 }
 
+.counter {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  width: 100px; /* Set the size of the progress bar */
+  height: 100px;
+  position: absolute; /* Enable clipping */
+  clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+}
+/* Set the sizes of the elements that make up the progress bar */
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #0070ff;
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+/* Using the data attributes for the animation selectors. */
+/* Base settings for all animated elements */
+div[data-anim~="base"] {
+  animation-iteration-count: 1; /* Only run once */
+  animation-fill-mode: forwards; /* Hold the last keyframe */
+  animation-timing-function: linear; /* Linear animation */
+}
+
+.wrapper[data-anim~="wrapper"] {
+  animation-duration: 0.01s; /* Complete keyframes asap */
+  animation-delay: 3s; /* Wait half of the animation */
+  animation-name: close-wrapper; /* Keyframes name */
+}
+
+.circle[data-anim~="left"] {
+  animation-duration: 6s; /* Full animation time */
+  animation-name: left-spin;
+}
+
+.circle[data-anim~="right"] {
+  animation-duration: 3s; /* Half animation time */
+  animation-name: right-spin;
+}
+/* Rotate the right side of the progress bar from 0 to 180 degrees */
+@keyframes right-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+@keyframes left-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Set the wrapper clip to auto, effectively removing the clip */
+@keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+
 [style="text-align: center;"] {
   font-size: 50px;
   font-weight: 900;
@@ -163,8 +237,6 @@ body {
   background-color: rgb(0, 151, 211);
   border-radius: 50%;
   margin: 10px;
-  background-image: url("https://scontent.fcai3-1.fna.fbcdn.net/v/t1.6435-9/140513925_748562276079060_6206655851114517863_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGNNO8kn7IZRN3Deik12t2fzGbvMPZ6l8_MZu8w9nqXzy02od14kD9siRR3U8B8i-FU4dOB45w_LgRbiMP8uvd5&_nc_ohc=4gbjzY1UHdwAX9LjUOH&_nc_ht=scontent.fcai3-1.fna&oh=dc66b39e4665b30fcd7c75ecd48a2a41&oe=617AC24A");
-  background-size: contain;
 }
 .frinds .frind-one h3 {
   margin: 0;
